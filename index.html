@@ -476,8 +476,10 @@
       padding: 32px 28px; border: 1px solid var(--border);
       transition: all var(--transition);
     }
-    .problem-card:hover {
-      border-color: transparent; box-shadow: var(--shadow-lg); transform: translateY(-4px);
+    @media (hover: hover) {
+      .problem-card:hover {
+        border-color: transparent; box-shadow: var(--shadow-lg); transform: translateY(-4px);
+      }
     }
     .problem-icon {
       width: 48px; height: 48px; border-radius: 12px;
@@ -512,15 +514,19 @@
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: var(--accent-gradient); opacity: 0; transition: opacity var(--transition);
     }
-    .bento-card:hover {
-      border-color: transparent; box-shadow: var(--shadow-lg); transform: translateY(-4px);
+    @media (hover: hover) {
+      .bento-card:hover {
+        border-color: transparent; box-shadow: var(--shadow-lg); transform: translateY(-4px);
+      }
+      .bento-card:hover::after { opacity: 1; }
     }
-    .bento-card:hover::after { opacity: 1; }
     .bento-featured {
       grid-column: span 2; grid-row: span 2; padding: 48px 40px;
       display: flex; flex-direction: column; justify-content: space-between;
     }
-    .bento-featured:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+    @media (hover: hover) {
+      .bento-featured:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+    }
     .bento-wide { grid-column: span 2; }
     .bento-icon {
       width: 52px; height: 52px; border-radius: 14px;
@@ -586,7 +592,9 @@
       border-radius: var(--radius-lg); padding: 28px;
       transition: border-color var(--transition);
     }
-    .case-visual-wrap:hover { border-color: rgba(255,255,255,0.12); }
+    @media (hover: hover) {
+      .case-visual-wrap:hover { border-color: rgba(255,255,255,0.12); }
+    }
     .case-vis-header {
       display: flex; align-items: center; gap: 8px;
       margin-bottom: 20px; padding-bottom: 14px;
@@ -674,7 +682,7 @@
     }
 
     /* ===== CALCULATOR ===== */
-    .calculator { padding: 120px 0; background: #fff; }
+    .calculator { padding: 120px 0; background: linear-gradient(180deg, #F0F4FF 0%, #FAFBFD 100%); }
     .calc-inner {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 80px; align-items: start;
@@ -944,7 +952,7 @@
       <div class="hero-inner">
         <div class="hero-content">
           <div class="hero-eyebrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             Automation systems for small &amp; mid-size teams
           </div>
           <h1>Your best people are stuck on your <span class="hero-gradient">worst tasks</span></h1>
@@ -1022,15 +1030,15 @@
           <span><strong>500+</strong> manual hours eliminated monthly</span>
         </div>
         <div class="trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           <span><strong>~15hrs</strong> saved per client weekly</span>
         </div>
         <div class="trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           <span><strong>30-day</strong> typical delivery</span>
         </div>
         <div class="trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span><strong>Zero</strong> lock-in contracts</span>
         </div>
       </div>
@@ -1048,21 +1056,21 @@
       <div class="problems-grid">
         <div class="problem-card reveal reveal-delay-1">
           <div class="problem-icon red">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
           </div>
           <h3>"We type the same data into three different systems"</h3>
           <p>Orders, contacts, or inventory get manually re-keyed across tools that should be connected — wasting hours and introducing errors every single day.</p>
         </div>
         <div class="problem-card reveal reveal-delay-2">
           <div class="problem-icon amber">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h3>"Follow-ups keep falling through the cracks"</h3>
           <p>Leads go cold, invoices go unsent, tasks get forgotten — not because anyone's lazy, but because no one can track everything in their head.</p>
         </div>
         <div class="problem-card reveal reveal-delay-3">
           <div class="problem-icon red">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <h3>"We're growing, but our operations aren't keeping up"</h3>
           <p>You've added people, tools, and revenue — but the backend still runs on manual handoffs and tribal knowledge. Every new hire makes the mess bigger instead of better.</p>
@@ -1082,7 +1090,7 @@
       <div class="bento">
         <div class="bento-card bento-featured reveal">
           <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <div>
             <h3>Custom Automations &amp; Integrations</h3>
@@ -1097,28 +1105,28 @@
         </div>
         <div class="bento-card reveal reveal-delay-1">
           <div class="bento-icon" style="background:#F3E8FF;color:#7C3AED;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </div>
           <h3>AI Workflows</h3>
           <p>AI that reads incoming requests, classifies them by urgency, scores leads, or summarizes reports — cutting triage time from hours to zero.</p>
         </div>
         <div class="bento-card reveal reveal-delay-2">
           <div class="bento-icon" style="background:#ECFDF5;color:#10B981;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
           <h3>Internal Tools</h3>
           <p>Operations dashboards that show your team exactly what needs attention today — no more digging through five spreadsheets to find the answer.</p>
         </div>
         <div class="bento-card reveal reveal-delay-3">
           <div class="bento-icon" style="background:#FFF7ED;color:#F97316;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
           </div>
           <h3>Data Pipelines</h3>
           <p>Automated collection, cleaning, and delivery of business data — from gathering market intel to generating weekly reports your team actually reads.</p>
         </div>
         <div class="bento-card bento-wide reveal reveal-delay-4">
           <div class="bento-icon" style="background:#FEF2F2;color:#EF4444;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
           </div>
           <h3>Outreach &amp; Follow-Up Systems</h3>
           <p>Automated prospecting, lead qualification, and follow-up sequences that make sure no opportunity slips through the cracks. Built on your data, triggered by real events — not spray-and-pray mass email.</p>
@@ -1140,7 +1148,7 @@
       <div class="case-card reveal">
         <div class="case-text">
           <h3>An automated lead qualifier that turns a signup list into a prioritized call sheet in minutes</h3>
-          <p>A startup founder was manually researching every inbound lead — Googling names, scanning LinkedIn, reading company pages — spending 15-20 minutes per person just to decide if they were worth a call.</p>
+          <p>Nick Romero at LaunchPath was manually researching every inbound lead — Googling names, scanning LinkedIn, reading company pages — spending 15-20 minutes per person just to decide if they were worth a call.</p>
           <p>We built an automated qualification pipeline that takes an email address, searches across four web sources in parallel, and uses AI to score each lead on relevant dimensions. The result: a ranked, tiered list with enough context to sound informed on the first call.</p>
           <div class="case-metrics">
             <div class="case-metric">
@@ -1590,7 +1598,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#2563EB"/><path d="M9 17L13 21L23 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#2563EB"/><path d="M9 17L13 21L23 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           SureStep Automations
         </div>
         <div class="footer-links">
